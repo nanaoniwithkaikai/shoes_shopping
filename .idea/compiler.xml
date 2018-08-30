@@ -6,11 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shoes_shopping" />
+        <module name="com.onuo.shoes" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="shoes_shopping" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

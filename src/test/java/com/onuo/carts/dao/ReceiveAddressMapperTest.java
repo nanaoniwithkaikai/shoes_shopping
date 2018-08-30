@@ -13,6 +13,8 @@ public class ReceiveAddressMapperTest{
         System.out.println(mapper.queryAll(1));
         System.out.println("wangyingchangceshi");
         System.out.println("殷桂根帅！！！");
+        System.out.println("吴冬前更帅！！！");
+
 
     }
 }
