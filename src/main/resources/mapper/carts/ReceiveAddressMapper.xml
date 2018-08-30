@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.carts.dao.ReceiveAddressMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.carts.model.ReceiveAddress">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="address_id" jdbcType="INTEGER" property="addressId" />
+    <result column="address_province" jdbcType="VARCHAR" property="addressProvince" />
+    <result column="address_city" jdbcType="VARCHAR" property="addressCity" />
+    <result column="address_area" jdbcType="VARCHAR" property="addressArea" />
+    <result column="address_street" jdbcType="VARCHAR" property="addressStreet" />
+    <result column="address_detail" jdbcType="VARCHAR" property="addressDetail" />
+    <result column="address_post_code" jdbcType="INTEGER" property="addressPostCode" />
+    <result column="address_recipient_name" jdbcType="VARCHAR" property="addressRecipientName" />
+    <result column="address_recipient_telno" jdbcType="BIGINT" property="addressRecipientTelno" />
+    <result column="is_default_address" jdbcType="INTEGER" property="isDefaultAddress" />
+    <result column="cust_id" jdbcType="INTEGER" property="custId" />
+  </resultMap>
+    <insert id="save"></insert>
+  <update id="update"></update>
+  <update id="updateDefaultAddress"></update>
+  <delete id="delete"></delete>
+  <select id="queryAll" resultMap="BaseResultMap">
+    SELECT * from receive_address
+  </select>
+</mapper>

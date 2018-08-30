@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.goods.dao.ShoesSizeMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.goods.model.ShoesSize">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shoes_size_id" jdbcType="INTEGER" property="shoesSizeId" />
+    <result column="shoes_size" jdbcType="REAL" property="shoesSize" />
+    <result column="shoes_state" jdbcType="BIT" property="shoesState" />
+  </resultMap>
+    <select id="queryAllSizeByShooesId" resultType="com.onuo.goods.model.ShoesSize"></select>
+</mapper>

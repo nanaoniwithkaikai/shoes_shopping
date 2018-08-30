@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.goods.dao.ShoesImgMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.goods.model.ShoesImg">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="img_id" jdbcType="INTEGER" property="imgId" />
+    <result column="shoes_id" jdbcType="INTEGER" property="shoesId" />
+    <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
+    <result column="sort_no" jdbcType="INTEGER" property="sortNo" />
+  </resultMap>
+    <select id="queryAllImgByShooesId" resultType="com.onuo.goods.model.ShoesImg"></select>
+</mapper>

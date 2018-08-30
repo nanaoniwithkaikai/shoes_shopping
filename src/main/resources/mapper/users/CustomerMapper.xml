@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.users.dao.CustomerMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.users.model.Customer">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="cust_id" jdbcType="INTEGER" property="custId" />
+    <result column="cust_name" jdbcType="VARCHAR" property="custName" />
+    <result column="cust_pwd" jdbcType="VARCHAR" property="custPwd" />
+    <result column="cust_age" jdbcType="INTEGER" property="custAge" />
+    <result column="cust_phone" jdbcType="INTEGER" property="custPhone" />
+    <result column="cust_email" jdbcType="VARCHAR" property="custEmail" />
+    <result column="cust_create_time" jdbcType="TIMESTAMP" property="custCreateTime" />
+    <result column="cust_update_time" jdbcType="TIMESTAMP" property="custUpdateTime" />
+    <result column="cust_profile" jdbcType="VARCHAR" property="custProfile" />
+  </resultMap>
+  <insert id="regist"></insert>
+  <select id="isValidTelno" resultType="java.lang.Boolean"></select>
+  <select id="isValidEmail" resultType="java.lang.Boolean"></select>
+  <select id="queryById" resultType="com.onuo.users.model.Customer"></select>
+</mapper>

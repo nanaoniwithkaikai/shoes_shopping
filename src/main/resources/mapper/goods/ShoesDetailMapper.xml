@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.goods.dao.ShoesDetailMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.goods.model.ShoesDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shoes_detail_id" jdbcType="INTEGER" property="shoesDetailId" />
+    <result column="shoes_id" jdbcType="INTEGER" property="shoesId" />
+    <result column="shoes_color_id" jdbcType="INTEGER" property="shoesColorId" />
+    <result column="shoes_size_id" jdbcType="INTEGER" property="shoesSizeId" />
+    <result column="shoes_inventory" jdbcType="INTEGER" property="shoesInventory" />
+    <result column="shoes_sale_count" jdbcType="INTEGER" property="shoesSaleCount" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+</mapper>

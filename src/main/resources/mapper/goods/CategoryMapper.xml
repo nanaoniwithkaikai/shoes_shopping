@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.goods.dao.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.goods.model.Category">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="category_desc" jdbcType="VARCHAR" property="categoryDesc" />
+    <result column="category_create_time" jdbcType="DATE" property="categoryCreateTime" />
+    <result column="category_update_time" jdbcType="DATE" property="categoryUpdateTime" />
+    <result column="category_status" jdbcType="TINYINT" property="categoryStatus" />
+  </resultMap>
+    <select id="queryAll" resultType="com.onuo.goods.model.Category"></select>
+</mapper>

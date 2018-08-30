@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.carts.dao.CartMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.carts.model.Cart">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
+    <result column="cust_id" jdbcType="INTEGER" property="custId" />
+    <result column="shoes_detail_id" jdbcType="INTEGER" property="shoesDetailId" />
+    <result column="quality" jdbcType="VARCHAR" property="quality" />
+    <result column="add_time" jdbcType="DATE" property="addTime" />
+    <result column="update_time" jdbcType="DATE" property="updateTime" />
+  </resultMap>
+    <insert id="save"></insert>
+  <update id="updateCount"></update>
+  <delete id="delete"></delete>
+</mapper>

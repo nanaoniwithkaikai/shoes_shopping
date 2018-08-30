@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onuo.goods.dao.ShoesMapper">
+  <resultMap id="BaseResultMap" type="com.onuo.goods.model.Shoes">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shoes_id" jdbcType="INTEGER" property="shoesId" />
+    <result column="shoes_number" jdbcType="INTEGER" property="shoesNumber" />
+    <result column="shoes_name" jdbcType="VARCHAR" property="shoesName" />
+    <result column="shoes_price_sale" jdbcType="REAL" property="shoesPriceSale" />
+    <result column="shoes_discount" jdbcType="REAL" property="shoesDiscount" />
+    <result column="shoes_desc" jdbcType="VARCHAR" property="shoesDesc" />
+    <result column="shoes_onsale_time" jdbcType="DATE" property="shoesOnsaleTime" />
+    <result column="shoes_offsale_time" jdbcType="DATE" property="shoesOffsaleTime" />
+    <result column="shoes_sale_count" jdbcType="INTEGER" property="shoesSaleCount" />
+    <result column="shoes_gender" jdbcType="TINYINT" property="shoesGender" />
+    <result column="shoes_status" jdbcType="TINYINT" property="shoesStatus" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+  </resultMap>
+    <select id="queryAll" resultType="com.onuo.goods.model.Shoes"></select>
+  <select id="queryByName" resultType="com.onuo.goods.model.Shoes"></select>
+  <select id="queryByGender" resultType="com.onuo.goods.model.Shoes"></select>
+  <select id="queryBySize" resultType="com.onuo.goods.model.Shoes"></select>
+  <select id="queryByPrice" resultType="com.onuo.goods.model.Shoes"></select>
+  <select id="queryByCategory" resultType="com.onuo.goods.model.Shoes"></select>
+</mapper>
