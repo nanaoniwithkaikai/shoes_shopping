@@ -16,7 +16,11 @@
     <result column="cust_profile" jdbcType="VARCHAR" property="custProfile" />
   </resultMap>
   <insert id="regist"></insert>
-  <select id="isValidTelno" resultType="java.lang.Boolean"></select>
-  <select id="isValidEmail" resultType="java.lang.Boolean"></select>
+
+  <update id="updatePwd"></update>
   <select id="queryById" resultType="com.onuo.users.model.Customer"></select>
+  <select id="isValidTelno" resultType="java.lang.Long"></select>
+  <select id="isValidEmail" resultType="java.lang.String"></select>
+  <select id="checkTelnoAndPwd" resultType="com.onuo.users.model.Customer"></select>
+  <select id="checkEmailAndPwd" resultType="com.onuo.users.model.Customer"></select>
 </mapper>

@@ -11,10 +11,10 @@ public interface ShoesMapper extends MyMapper<Shoes> {
      */
       List<Shoes> queryAll();
     /**
-     @param shooesName 指定查询的鞋子名称
+     @param shoesName 指定查询的鞋子名称
      @return 返回鞋子名称中包含指定字符串的鞋子列表
      */
-      List<Shoes> queryByName(String shooesName);
+      List<Shoes> queryByName(String shoesName);
     /**
      @param gender 指定查询的鞋子适用的性别，0 表示男性，1 表示女性
      @return 返回指定性别的鞋子对象列表
@@ -35,5 +35,5 @@ public interface ShoesMapper extends MyMapper<Shoes> {
      @param categoryId 指定的鞋子类别ID
      @return 返回指定类别中的所有鞋子对象列表
      */
-    public  List<Shoes> queryByCategory(Integer categoryId);
+      List<Shoes> queryByCategory(Integer categoryId);
 }

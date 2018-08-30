@@ -8,5 +8,5 @@ public interface OrderDetailMapper extends MyMapper<OrderDetail> {
      @param orderDetail 添加的新订单详情对象
      @return 返回添加新订单详情是否成功,true表示添加成功，false表示添加失败
      */
-      boolean saveDetails(OrderDetail orderDetail);
+      int saveDetails(OrderDetail orderDetail);
 }

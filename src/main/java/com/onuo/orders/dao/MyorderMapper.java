@@ -10,7 +10,7 @@ public interface MyorderMapper extends MyMapper<Myorder> {
      @param order 添加的新订单对象
      @return 返回是否添加订单成功,true表示添加成功，false表示添加失败
      */
-      boolean save(Myorder order);
+      int save(Myorder order);
 
     /**
      @param custId 当前用户的ID
@@ -34,5 +34,5 @@ public interface MyorderMapper extends MyMapper<Myorder> {
      @param orderId  指定的要修改的订单ID
      @return  返回是否修改成功，true表示修改成功，false表示修改失败
      */
-    boolean updateStatus(Integer status,Integer orderId);
+    int updateStatus(Integer status,Integer orderId);
 }

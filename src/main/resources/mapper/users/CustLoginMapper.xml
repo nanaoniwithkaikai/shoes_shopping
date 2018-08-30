@@ -13,7 +13,6 @@
     <result column="login_status" jdbcType="INTEGER" property="loginStatus" />
     <result column="cust_id" jdbcType="INTEGER" property="custId" />
   </resultMap>
-  <insert id="resetLoginPwd"></insert>
-  <select id="loginByEmail" resultType="java.lang.Integer"></select>
-  <select id="loginByTelno" resultType="java.lang.Integer"></select>
+  <insert id="save"></insert>
+
 </mapper>
