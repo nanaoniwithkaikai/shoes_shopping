@@ -27,4 +27,5 @@ public class Myorder {
 
     @Column(name = "order_status")
     private Integer orderStatus;
+
 }

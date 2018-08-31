@@ -42,8 +42,11 @@ public class MybatisUtil {
 	 * 关闭SqlSession
 	 */
 	public static void closeSession(){
-		if(session !=null)
+		if(session !=null){
+			session.commit();
 			session.close();
+		}
+
 	}
 
 }

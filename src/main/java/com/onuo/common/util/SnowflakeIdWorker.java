@@ -134,11 +134,11 @@ public class SnowflakeIdWorker {
 
     //==============================Test=============================================
     /** 测试 */
-    public static void main(String[] args) {
-        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 22);
-        for (int i = 0; i < 10; i++) {
-            long id = idWorker.nextId();
-            System.out.println(id);
-        }
-    }
+//    public static void main(String[] args) {
+//        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 22);
+//        for (int i = 0; i < 10; i++) {
+//            long id = idWorker.nextId();
+//            System.out.println(id);
+//        }
+//    }
 }

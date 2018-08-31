@@ -13,7 +13,9 @@
     <result column="order_address_id" jdbcType="VARCHAR" property="orderAddressId" />
     <result column="order_status" jdbcType="INTEGER" property="orderStatus" />
   </resultMap>
-    <insert id="save"></insert>
+    <!--<insert id="save"></insert>-->
+  <!--添加订单-->
+  <insert id="save" parameterType="com.onuo.orders.model.Myorder"></insert>
   <update id="updateStatus"></update>
   <select id="queryAll" resultType="com.onuo.orders.model.Myorder"></select>
   <select id="queryByShooesName" resultType="com.onuo.orders.model.Myorder"></select>
