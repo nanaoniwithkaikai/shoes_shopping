@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <id column="category_id" jdbcType="VARCHAR" property="categoryId" />
     <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
     <result column="category_desc" jdbcType="VARCHAR" property="categoryDesc" />
     <result column="category_create_time" jdbcType="DATE" property="categoryCreateTime" />

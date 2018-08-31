@@ -5,11 +5,11 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="cust_id" jdbcType="INTEGER" property="custId" />
+    <id column="cust_id" jdbcType="VARCHAR" property="custId" />
     <result column="cust_name" jdbcType="VARCHAR" property="custName" />
     <result column="cust_pwd" jdbcType="VARCHAR" property="custPwd" />
     <result column="cust_age" jdbcType="INTEGER" property="custAge" />
-    <result column="cust_phone" jdbcType="INTEGER" property="custPhone" />
+    <result column="cust_phone" jdbcType="VARCHAR" property="custPhone" />
     <result column="cust_email" jdbcType="VARCHAR" property="custEmail" />
     <result column="cust_create_time" jdbcType="TIMESTAMP" property="custCreateTime" />
     <result column="cust_update_time" jdbcType="TIMESTAMP" property="custUpdateTime" />

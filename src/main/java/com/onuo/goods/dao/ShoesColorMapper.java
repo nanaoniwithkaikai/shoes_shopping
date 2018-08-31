@@ -10,5 +10,5 @@ public interface ShoesColorMapper extends MyMapper<ShoesColor> {
      @param shooesId 指定的鞋子ID
      @return 返回指定鞋子的所有颜色
      */
-     List<ShoesColor> queryAllColorByShooesId(Integer shooesId);
+     List<ShoesColor> queryAllColorByShooesId(String shooesId);
 }

@@ -10,5 +10,5 @@ public interface ShoesSizeMapper extends MyMapper<ShoesSize> {
      @param shoesId 指定的鞋子ID
      @return 返回指定鞋子的所有尺码
      */
-     List<ShoesSize> queryAllSizeByShooesId(Integer shoesId);
+     List<ShoesSize> queryAllSizeByShooesId(String shoesId);
 }

@@ -8,7 +8,7 @@ public interface CustomerMapper extends MyMapper<Customer> {
      @param telno 验证手机号码是否已经注册
      @return 返回是否是有效的注册手机号，true表示没有注册过，false表示已经注册
      */
-    Long isValidTelno(Long telno);
+    Long isValidTelno(String telno);
     /**
      @param email 验证邮箱是否已经注册
      @return 返回是否是有效的注册邮箱，true表示没有注册过，false表示已经注册
@@ -31,7 +31,7 @@ public interface CustomerMapper extends MyMapper<Customer> {
      @param password 登录密码
      @return 返回登录用户信息，若返回null,表示账户或密码错误
      */
-      Customer checkTelnoAndPwd(Long telno, String password);
+      Customer checkTelnoAndPwd(String telno, String password);
     /**
      判断用户登录的邮箱与密码是否正确
      @param email 登录邮箱（注册时的邮箱）
@@ -43,5 +43,5 @@ public interface CustomerMapper extends MyMapper<Customer> {
      @param custId 用户ID
      @return 返回用户详细信息
      */
-      Customer queryById(Integer custId);
+      Customer queryById(String custId);
 }

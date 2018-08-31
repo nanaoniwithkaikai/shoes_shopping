@@ -7,13 +7,13 @@ import javax.persistence.*;
 public class Cart {
     @Id
     @Column(name = "cart_id")
-    private Integer cartId;
+    private String cartId;
 
     @Column(name = "cust_id")
-    private Integer custId;
+    private String custId;
 
     @Column(name = "shoes_detail_id")
-    private Integer shoesDetailId;
+    private String shoesDetailId;
 
     private String quality;
 

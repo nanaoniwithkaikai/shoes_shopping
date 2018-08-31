@@ -11,30 +11,30 @@ public interface ReceiveAddressMapper extends MyMapper<ReceiveAddress> {
      @param custId 当前用户ID
      @return 返回是否添加成功,true表示添加成功，false表示添加失败
      */
-    int save(ReceiveAddress newAddress,Integer custId);
+    int save(ReceiveAddress newAddress,String custId);
 
     /**
      @param addressId 要删除的收件地址ID
      @param custId 当前用户ID
      @return 返回是否删除成功,true表示删除成功，false表示删除失败
      */
-    int delete(Integer addressId,Integer custId);
+    int delete(String addressId,String custId);
 
     /**
      @param address 要修改的收件地址对象
      @param custId 当前用户ID
      @return 返回是否修改成功,true表示修改成功，false表示修改失败
      */
-    int update(ReceiveAddress address,Integer custId);
+    int update(ReceiveAddress address,String custId);
     /**
      @param custId 当前用户ID
      @return 返回当前客户所有的
      */
-      List<ReceiveAddress> queryAll(Integer custId);
+      List<ReceiveAddress> queryAll(String custId);
     /**
      @param addressId 要设置为默认收件地址的地址ID
      @param custId 当前用户ID
      @return 返回是否修改成功,true表示修改成功，false表示修改失败
      */
-    int updateDefaultAddress(Integer addressId,Integer custId);
+    int updateDefaultAddress(String addressId,String custId);
 }

@@ -17,45 +17,4 @@ public class ShoesSize {
     @Column(name = "shoes_state")
     private Boolean shoesState;
 
-    /**
-     * @return shoes_size_id
-     */
-    public Integer getShoesSizeId() {
-        return shoesSizeId;
-    }
-
-    /**
-     * @param shoesSizeId
-     */
-    public void setShoesSizeId(Integer shoesSizeId) {
-        this.shoesSizeId = shoesSizeId;
-    }
-
-    /**
-     * @return shoes_size
-     */
-    public Float getShoesSize() {
-        return shoesSize;
-    }
-
-    /**
-     * @param shoesSize
-     */
-    public void setShoesSize(Float shoesSize) {
-        this.shoesSize = shoesSize;
-    }
-
-    /**
-     * @return shoes_state
-     */
-    public Boolean getShoesState() {
-        return shoesState;
-    }
-
-    /**
-     * @param shoesState
-     */
-    public void setShoesState(Boolean shoesState) {
-        this.shoesState = shoesState;
-    }
 }

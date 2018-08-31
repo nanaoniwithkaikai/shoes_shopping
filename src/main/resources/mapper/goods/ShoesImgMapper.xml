@@ -5,8 +5,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="img_id" jdbcType="INTEGER" property="imgId" />
-    <result column="shoes_id" jdbcType="INTEGER" property="shoesId" />
+    <id column="img_id" jdbcType="VARCHAR" property="imgId" />
+    <result column="shoes_id" jdbcType="VARCHAR" property="shoesId" />
     <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
     <result column="sort_no" jdbcType="INTEGER" property="sortNo" />
   </resultMap>

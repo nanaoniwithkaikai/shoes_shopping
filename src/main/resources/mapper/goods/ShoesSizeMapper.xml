@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="shoes_size_id" jdbcType="INTEGER" property="shoesSizeId" />
+    <id column="shoes_size_id" jdbcType="VARCHAR" property="shoesSizeId" />
     <result column="shoes_size" jdbcType="REAL" property="shoesSize" />
     <result column="shoes_state" jdbcType="BIT" property="shoesState" />
   </resultMap>

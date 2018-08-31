@@ -5,9 +5,9 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
-    <result column="cust_id" jdbcType="INTEGER" property="custId" />
-    <result column="shoes_detail_id" jdbcType="INTEGER" property="shoesDetailId" />
+    <id column="cart_id" jdbcType="VARCHAR" property="cartId" />
+    <result column="cust_id" jdbcType="VARCHAR" property="custId" />
+    <result column="shoes_detail_id" jdbcType="VARCHAR" property="shoesDetailId" />
     <result column="quality" jdbcType="VARCHAR" property="quality" />
     <result column="add_time" jdbcType="DATE" property="addTime" />
     <result column="update_time" jdbcType="DATE" property="updateTime" />

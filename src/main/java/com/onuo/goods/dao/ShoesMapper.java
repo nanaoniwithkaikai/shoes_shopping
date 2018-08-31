@@ -35,5 +35,5 @@ public interface ShoesMapper extends MyMapper<Shoes> {
      @param categoryId 指定的鞋子类别ID
      @return 返回指定类别中的所有鞋子对象列表
      */
-      List<Shoes> queryByCategory(Integer categoryId);
+      List<Shoes> queryByCategory(String categoryId);
 }

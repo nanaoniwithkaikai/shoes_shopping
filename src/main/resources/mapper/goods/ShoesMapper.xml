@@ -5,8 +5,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="shoes_id" jdbcType="INTEGER" property="shoesId" />
-    <result column="shoes_number" jdbcType="INTEGER" property="shoesNumber" />
+    <id column="shoes_id" jdbcType="VARCHAR" property="shoesId" />
+    <result column="shoes_number" jdbcType="VARCHAR" property="shoesNumber" />
     <result column="shoes_name" jdbcType="VARCHAR" property="shoesName" />
     <result column="shoes_price_sale" jdbcType="REAL" property="shoesPriceSale" />
     <result column="shoes_discount" jdbcType="REAL" property="shoesDiscount" />
@@ -16,12 +16,30 @@
     <result column="shoes_sale_count" jdbcType="INTEGER" property="shoesSaleCount" />
     <result column="shoes_gender" jdbcType="TINYINT" property="shoesGender" />
     <result column="shoes_status" jdbcType="TINYINT" property="shoesStatus" />
-    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="category_id" jdbcType="VARCHAR" property="categoryId" />
   </resultMap>
-    <select id="queryAll" resultType="com.onuo.goods.model.Shoes"></select>
-  <select id="queryByName" resultType="com.onuo.goods.model.Shoes"></select>
-  <select id="queryByGender" resultType="com.onuo.goods.model.Shoes"></select>
-  <select id="queryBySize" resultType="com.onuo.goods.model.Shoes"></select>
-  <select id="queryByPrice" resultType="com.onuo.goods.model.Shoes"></select>
-  <select id="queryByCategory" resultType="com.onuo.goods.model.Shoes"></select>
+  <!--默认按照鞋的销量降序排序-->
+    <select id="queryAll" resultMap="BaseResultMap">
+      SELECT * from shoes order BY shoes_sale_count DESC
+    </select>
+  <!--查询的鞋子名称模糊查询,并按照销量排序-->
+  <select id="queryByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT * from shoes WHERE shoes_name LIKE "%"#{shoesName}"%" order BY shoes_sale_count DESC
+  </select>
+  <!--根据鞋子性别查询-->
+  <select id="queryByGender" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    SELECT * from shoes WHERE shoes_gender=#{gender} order by shoes_sale_count DESC
+  </select>
+  <!--根据鞋码大小查询-->
+  <select id="queryBySize" resultType="com.onuo.goods.model.Shoes">
+    SELECT * from shoes WHERE shoes_gender=#{gender} order by shoes_sale_count DESC
+  </select>
+  <!--根据鞋子价格查询-->
+  <select id="queryByPrice" resultType="com.onuo.goods.model.Shoes">
+
+  </select>
+  <!--根据鞋子类别查询-->
+  <select id="queryByCategory" resultType="com.onuo.goods.model.Shoes">
+
+  </select>
 </mapper>

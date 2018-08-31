@@ -16,23 +16,23 @@ public interface MyorderMapper extends MyMapper<Myorder> {
      @param custId 当前用户的ID
      @return 返回当前账户的所有订单列表
      */
-      List<Myorder> queryAll(Integer custId);
+      List<Myorder> queryAll(String custId);
     /**
      @param shooesName 要查询的鞋的名称（模糊查询）
      @param custId 当前用户的ID
      @return 返回当前用户的要查询的订单列表
      */
-      List<Myorder> queryByShooesName(String shooesName,Integer custId);
+      List<Myorder> queryByShooesName(String shooesName,String custId);
     /**
      @param orderNumber 要查询的鞋编号（模糊查询）
      @param custId 当前用户的ID
      @return 返回当前用户的要查询指定的订单详情
      */
-      List<Myorder> queryById(Integer orderNumber,Integer custId);
+      List<Myorder> queryById(Integer orderNumber,String custId);
     /**
      @param status  修改订单状态
      @param orderId  指定的要修改的订单ID
      @return  返回是否修改成功，true表示修改成功，false表示修改失败
      */
-    int updateStatus(Integer status,Integer orderId);
+    int updateStatus(Integer status,String orderId);
 }

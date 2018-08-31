@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="address_id" jdbcType="INTEGER" property="addressId" />
+    <id column="address_id" jdbcType="VARCHAR" property="addressId" />
     <result column="address_province" jdbcType="VARCHAR" property="addressProvince" />
     <result column="address_city" jdbcType="VARCHAR" property="addressCity" />
     <result column="address_area" jdbcType="VARCHAR" property="addressArea" />
@@ -15,7 +15,7 @@
     <result column="address_recipient_name" jdbcType="VARCHAR" property="addressRecipientName" />
     <result column="address_recipient_telno" jdbcType="BIGINT" property="addressRecipientTelno" />
     <result column="is_default_address" jdbcType="INTEGER" property="isDefaultAddress" />
-    <result column="cust_id" jdbcType="INTEGER" property="custId" />
+    <result column="cust_id" jdbcType="VARCHAR" property="custId" />
   </resultMap>
     <insert id="save"></insert>
   <update id="update"></update>

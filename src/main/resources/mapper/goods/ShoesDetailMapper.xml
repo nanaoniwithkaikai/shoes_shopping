@@ -5,10 +5,10 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="shoes_detail_id" jdbcType="INTEGER" property="shoesDetailId" />
-    <result column="shoes_id" jdbcType="INTEGER" property="shoesId" />
-    <result column="shoes_color_id" jdbcType="INTEGER" property="shoesColorId" />
-    <result column="shoes_size_id" jdbcType="INTEGER" property="shoesSizeId" />
+    <id column="shoes_detail_id" jdbcType="VARCHAR" property="shoesDetailId" />
+    <result column="shoes_id" jdbcType="VARCHAR" property="shoesId" />
+    <result column="shoes_color_id" jdbcType="VARCHAR" property="shoesColorId" />
+    <result column="shoes_size_id" jdbcType="VARCHAR" property="shoesSizeId" />
     <result column="shoes_inventory" jdbcType="INTEGER" property="shoesInventory" />
     <result column="shoes_sale_count" jdbcType="INTEGER" property="shoesSaleCount" />
     <result column="status" jdbcType="INTEGER" property="status" />
