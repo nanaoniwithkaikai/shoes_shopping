@@ -13,6 +13,10 @@
     <result column="login_status" jdbcType="INTEGER" property="loginStatus" />
     <result column="cust_id" jdbcType="VARCHAR" property="custId" />
   </resultMap>
-  <insert id="save"></insert>
+  <!-- 添加用户登录信息 -->
+  <insert id="save" parameterType="com.onuo.users.model.CustLogin">
+    insert into cust_login values(#{loginId},#{loginName},#{loginPwd},#{loginTime},#{loginIp},#{loginStatus},#{custId})
+
+  </insert>
 
 </mapper>

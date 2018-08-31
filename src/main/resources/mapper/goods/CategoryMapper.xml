@@ -12,5 +12,10 @@
     <result column="category_update_time" jdbcType="DATE" property="categoryUpdateTime" />
     <result column="category_status" jdbcType="TINYINT" property="categoryStatus" />
   </resultMap>
-    <select id="queryAll" resultType="com.onuo.goods.model.Category"></select>
+
+    <!-- 查看所有鞋子的类别 -->
+    <select id="queryAll" resultMap="BaseResultMap">
+      select category_id,category_name,category_desc,category_create_time,category_update_time,category_status
+      from category
+    </select>
 </mapper>
