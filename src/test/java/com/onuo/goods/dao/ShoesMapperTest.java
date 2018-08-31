@@ -1,5 +1,6 @@
 package com.onuo.goods.dao;
 
+import com.onuo.carts.model.ReceiveAddress;
 import com.onuo.common.util.CommonMapper;
 import org.junit.Test;
 
@@ -28,5 +29,25 @@ public class ShoesMapperTest {
     @Test
     public void queryByGender(){
         System.out.println(mapper.queryByGender(1));
+    }
+
+    /**
+     * 根据鞋子号码查询鞋子
+     */
+    @Test
+    public void queryBySize(){
+        System.out.println(mapper.queryBySize((float) 42));
+    }
+
+    /**
+     * 根据鞋子价格查询鞋子
+     */
+    @Test
+    public void queryByPrice(){
+        System.out.println(mapper.queryByPrice((float) 30, (float) 500));
+    }
+    @Test
+    public void categoryId(){
+        System.out.println(mapper.queryByCategory("1001"));
     }
 }

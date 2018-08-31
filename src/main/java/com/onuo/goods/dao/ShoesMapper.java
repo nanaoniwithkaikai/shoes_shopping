@@ -2,6 +2,7 @@ package com.onuo.goods.dao;
 
 import com.onuo.common.mapper.MyMapper;
 import com.onuo.goods.model.Shoes;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public interface ShoesMapper extends MyMapper<Shoes> {
      @param maxPrice 指定查询的鞋子的最大价格，若大小价格为null,则只按最小价格查询
      @return 返回指定价格范围内的鞋子对象列表
      */
-      List<Shoes> queryByPrice(Float minPrice,Float maxPrice);
+      List<Shoes> queryByPrice(@Param("minPrice")Float minPrice, @Param("maxPrice") Float maxPrice);
     /**
      @param categoryId 指定的鞋子类别ID
      @return 返回指定类别中的所有鞋子对象列表

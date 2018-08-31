@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface ShoesColorMapper extends MyMapper<ShoesColor> {
     /**
-     @param shooesId 指定的鞋子ID
+     @param shoesId 指定的鞋子ID
      @return 返回指定鞋子的所有颜色
      */
-     List<ShoesColor> queryAllColorByShooesId(String shooesId);
+     List<ShoesColor> queryAllColorByShooesId(String shoesId);
 }

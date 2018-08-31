@@ -10,5 +10,7 @@
     <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
     <result column="sort_no" jdbcType="INTEGER" property="sortNo" />
   </resultMap>
-    <select id="queryAllImgByShooesId" resultType="com.onuo.goods.model.ShoesImg"></select>
+    <select id="queryAllImgByShooesId" resultMap="BaseResultMap">
+      SELECT * from shoes_img WHERE shoes_id=#{shooesId} order by sort_no
+    </select>
 </mapper>
