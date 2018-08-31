@@ -25,7 +25,4 @@ public class IdGenerator {
         String userId = String.valueOf(prefix + suffix);
         return userId;
     }
-    public static void main(String[] args){
-        System.out.println(IdGenerator.getNewUserId());
-    }
 }
