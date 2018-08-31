@@ -9,5 +9,8 @@
         <module name="com.onuo.shoes" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.onuo.shoes" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
