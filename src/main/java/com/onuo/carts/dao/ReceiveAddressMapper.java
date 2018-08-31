@@ -8,10 +8,9 @@ import java.util.List;
 public interface ReceiveAddressMapper extends MyMapper<ReceiveAddress> {
     /**
      @param newAddress 新增的收件地址对象
-     @param custId 当前用户ID
      @return 返回是否添加成功,true表示添加成功，false表示添加失败
      */
-    int save(ReceiveAddress newAddress,String custId);
+    int save(ReceiveAddress newAddress);
 
     /**
      @param addressId 要删除的收件地址ID
@@ -22,10 +21,9 @@ public interface ReceiveAddressMapper extends MyMapper<ReceiveAddress> {
 
     /**
      @param address 要修改的收件地址对象
-     @param custId 当前用户ID
      @return 返回是否修改成功,true表示修改成功，false表示修改失败
      */
-    int update(ReceiveAddress address,String custId);
+    int update(ReceiveAddress address);
     /**
      @param custId 当前用户ID
      @return 返回当前客户所有的

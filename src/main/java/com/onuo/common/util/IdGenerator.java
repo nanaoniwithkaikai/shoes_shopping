@@ -20,7 +20,7 @@ public class IdGenerator {
         long suffix = Math.abs(uuid.hashCode() % 100000000);
         SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd");
         String time = sdf.format(new Date(System.currentTimeMillis()));
-        //生成前缀
+        //生成前缀m
         long prefix = Long.parseLong(time) * 100000000;
         String userId = String.valueOf(prefix + suffix);
         return userId;

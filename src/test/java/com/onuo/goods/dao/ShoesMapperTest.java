@@ -2,6 +2,7 @@ package com.onuo.goods.dao;
 
 import com.onuo.carts.model.ReceiveAddress;
 import com.onuo.common.util.CommonMapper;
+import com.onuo.goods.model.Shoes;
 import org.junit.Test;
 
 public class ShoesMapperTest {
@@ -29,6 +30,7 @@ public class ShoesMapperTest {
     @Test
     public void queryByGender(){
         System.out.println(mapper.queryByGender(1));
+
     }
 
     /**
