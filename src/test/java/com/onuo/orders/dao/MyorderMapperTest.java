@@ -11,6 +11,10 @@ import java.util.List;
 
 public class MyorderMapperTest {
     MyorderMapper mapper= (MyorderMapper) CommonMapper.getInstance().getMapper(MyorderMapper.class);
+
+    /**
+     * 1.添加订单
+     */
     @Test
     public void save(){
         Myorder myorder=new Myorder();
@@ -23,20 +27,24 @@ public class MyorderMapperTest {
         myorder.setOrderStatus(0);
         int rows=mapper.save(myorder);
         MybatisUtil.closeSession();
-        System.out.println(rows);
+        System.out.println("返回值："+rows);
     }
+
+    /**
+     * 2.查询用户所有订单
+     */
     @Test
     public void queryAll(){
         List<Myorder> myorderList=mapper.queryAll("1001");//（用户id）
         for (Myorder myorder:myorderList){
             System.out.println(myorder);
+            System.out.println("-------------------------------------------------");
         }
     }
-    @Test
-    public void updateStatus(){
-        mapper.updateStatus(1,"1");//（状态参数，订单id）
-        MybatisUtil.closeSession();
-    }
+
+    /**
+     * 3.根据鞋的名字模糊查询指定用户订单
+     */
     @Test
     public void queryByShooesName(){
         List<Myorder> myorderList=mapper.queryByShooesName("ni","1001");//（鞋的模糊名，用户id）
@@ -44,11 +52,25 @@ public class MyorderMapperTest {
             System.out.println(myorder);
         }
     }
+
+    /**
+     * 4.根据鞋的编号模糊查询指定用户订单
+     */
     @Test
     public void queryById(){
-        List<Myorder> myorderList=mapper.queryById("001","1001");//(鞋的模糊id,用户id)
+        List<Myorder> myorderList=mapper.queryById("0","1001");//(鞋的模糊id,用户id)
         for(Myorder myorder:myorderList){
             System.out.println(myorder);
         }
+    }
+
+    /**
+     * 5. 修改订单状态
+     */
+    @Test
+    public void updateStatus(){
+        int rows=mapper.updateStatus(1,"18083111477828");//（状态参数，订单id）
+        System.out.println("返回值："+rows);
+        MybatisUtil.closeSession();
     }
 }
