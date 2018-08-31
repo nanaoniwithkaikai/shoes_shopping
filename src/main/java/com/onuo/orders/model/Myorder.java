@@ -28,4 +28,59 @@ public class Myorder {
     @Column(name = "order_status")
     private Integer orderStatus;
 
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
+    }
+
+    public Date getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(Date orderTime) {
+        this.orderTime = orderTime;
+    }
+
+    public Float getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(Float orderPrice) {
+        this.orderPrice = orderPrice;
+    }
+
+    public String getOrderAddressId() {
+        return orderAddressId;
+    }
+
+    public void setOrderAddressId(String orderAddressId) {
+        this.orderAddressId = orderAddressId;
+    }
+
+    public Integer getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(Integer orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 }

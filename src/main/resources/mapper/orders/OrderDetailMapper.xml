@@ -11,5 +11,13 @@
     <result column="order_shoes_color" jdbcType="VARCHAR" property="orderShoesColor" />
     <result column="order_shoes_size" jdbcType="VARCHAR" property="orderShoesSize" />
   </resultMap>
-    <insert id="saveDetails"></insert>
+
+  <!--添加订单详情-->
+  <insert id="saveDetails">
+    insert into order_detail
+    (order_id,shoes_detail_id,quality,order_shoes_color,order_shoes_size)
+    values
+    (#{orderId},#{shoesDetailId},#{quality},#{orderShoesColor},#{orderShoesSize})
+  </insert>
+
 </mapper>

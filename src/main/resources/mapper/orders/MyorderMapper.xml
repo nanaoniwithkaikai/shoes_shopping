@@ -13,11 +13,47 @@
     <result column="order_address_id" jdbcType="VARCHAR" property="orderAddressId" />
     <result column="order_status" jdbcType="INTEGER" property="orderStatus" />
   </resultMap>
-    <!--<insert id="save"></insert>-->
+
   <!--添加订单-->
-  <insert id="save" parameterType="com.onuo.orders.model.Myorder"></insert>
-  <update id="updateStatus"></update>
-  <select id="queryAll" resultType="com.onuo.orders.model.Myorder"></select>
-  <select id="queryByShooesName" resultType="com.onuo.orders.model.Myorder"></select>
-  <select id="queryById" resultType="com.onuo.orders.model.Myorder"></select>
+  <insert id="save">
+    insert into myorder
+    (order_id,order_number,cust_id,order_time,order_price,order_address_id,order_status)
+    values
+    (#{orderId},#{orderNumber},#{custId},#{orderTime},#{orderPrice},#{orderAddressId},#{orderStatus})
+  </insert>
+
+
+  <!--查询用户所有订单-->
+  <select id="queryAll" parameterType="string" resultMap="BaseResultMap">
+    select *
+    from myorder
+    where cust_id=#{custId}
+  </select>
+
+
+  <!--当前用户模糊查询鞋的名字返回订单信息-->
+  <select id="queryByShooesName" resultMap="BaseResultMap">
+    select od.*
+    from myorder mo join order_detail od on mo.order_id=od.order_id
+                    join shoes_detail sd on od.shoes_detail_id=sd.shoes_detail_id
+                   join shoes sh on sh.shoes_id=sd.shoes_id
+    where  sh.shoes_name like "%"#{shooesName}"%" and mo.cust_id=#{custId}
+  </select>
+
+
+  <!--模糊查询的鞋编号 返回订单详情-->
+  <select id="queryById" resultMap="BaseResultMap" >
+    select mo.*
+    from myorder mo join order_detail od on mo.order_id=od.order_id
+                    join shoes_detail sd on od.shoes_detail_id=sd.shoes_detail_id
+    where sd.shoes_id like "%"#{shoesId}"%" and  mo.cust_id=#{custId}
+  </select>
+
+
+  <!--修改订单状态-->
+  <update id="updateStatus">
+    update myorder
+    set order_status=#{param1}
+    where order_id=#{param2}
+  </update>
 </mapper>
