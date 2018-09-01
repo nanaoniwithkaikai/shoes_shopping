@@ -61,6 +61,7 @@ public class MyorderMapperTest {
         List<Myorder> myorderList=mapper.queryById("0","1001");//(鞋的模糊id,用户id)
         for(Myorder myorder:myorderList){
             System.out.println(myorder);
+            System.out.println("123");
         }
     }
 
