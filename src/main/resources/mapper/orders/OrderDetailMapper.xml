@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.onuo.orders.dao.OrderDetailMapper">
+
   <resultMap id="BaseResultMap" type="com.onuo.orders.model.OrderDetail">
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="order_id" jdbcType="VARCHAR" property="orderId" />
     <id column="shoes_detail_id" jdbcType="VARCHAR" property="shoesDetailId" />
     <result column="quality" jdbcType="INTEGER" property="quality" />
     <result column="order_shoes_color" jdbcType="VARCHAR" property="orderShoesColor" />
     <result column="order_shoes_size" jdbcType="VARCHAR" property="orderShoesSize" />
   </resultMap>
-    <insert id="saveDetails"></insert>
+
+  <!--1.添加订单详情-->
+  <insert id="saveDetails">
+    insert into order_detail
+    (order_id,shoes_detail_id,quality,order_shoes_color,order_shoes_size)
+    values
+    (#{orderId},#{shoesDetailId},#{quality},#{orderShoesColor},#{orderShoesSize})
+  </insert>
+
 </mapper>

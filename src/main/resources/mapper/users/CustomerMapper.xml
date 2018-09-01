@@ -15,12 +15,50 @@
     <result column="cust_update_time" jdbcType="TIMESTAMP" property="custUpdateTime" />
     <result column="cust_profile" jdbcType="VARCHAR" property="custProfile" />
   </resultMap>
-  <insert id="regist"></insert>
 
-  <update id="updatePwd"></update>
-  <select id="queryById" resultType="com.onuo.users.model.Customer"></select>
-  <select id="isValidTelno" resultType="java.lang.Long"></select>
-  <select id="isValidEmail" resultType="java.lang.String"></select>
-  <select id="checkTelnoAndPwd" resultType="com.onuo.users.model.Customer"></select>
-  <select id="checkEmailAndPwd" resultType="com.onuo.users.model.Customer"></select>
+  <!-- 注册新用户 -->
+  <insert id="regist" parameterType="com.onuo.users.model.Customer">
+    insert into customer values(#{custId},#{custName},#{custPwd},#{custAge},#{custPhone},
+                                  #{custEmail},#{custCreateTime},#{custUpdateTime},#{custProfile})
+  </insert>
+
+<!-- 根据id修改密码 -->
+  <update id="updatePwd" parameterType="com.onuo.users.model.Customer">
+    update customer set cust_pwd=#{custPwd}
+    where cust_id=#{custId}
+  </update>
+
+  <!-- 根据id查看用户详细信息 -->
+  <select id="queryById" resultMap="BaseResultMap">
+    select cust_id,cust_name,cust_pwd,cust_age,cust_phone,cust_email,cust_create_time,cust_update_time,cust_profile
+    from customer
+    where cust_id=#{custId}
+  </select>
+
+  <!-- 判断手机号是否已经存在过 -->
+  <select id="isValidTelno" resultType="java.lang.Long" >
+    select cust_phone
+    from customer
+    where cust_phone=#{custPhone}
+  </select>
+<!-- 判断邮箱是否已经注册过-->
+  <select id="isValidEmail" resultType="java.lang.String">
+    select cust_email
+    from customer
+    where cust_email=#{custEmail}
+  </select>
+
+  <!-- 判断用户登录手机号和密码是否正确 -->
+  <select id="checkTelnoAndPwd"  resultMap="BaseResultMap">
+    select cust_id,cust_name,cust_pwd,cust_age,cust_phone,cust_email,cust_create_time,cust_update_time,cust_profile
+    from customer
+    where cust_phone=#{custPhone} and cust_pwd=#{custPwd}
+  </select>
+
+  <!-- 判断用户登录邮箱和密码是否正确 -->
+  <select id="checkEmailAndPwd" resultType="com.onuo.users.model.Customer" resultMap="BaseResultMap">
+    select cust_id,cust_name,cust_pwd,cust_age,cust_phone,cust_email,cust_create_time,cust_update_time,cust_profile
+    from customer
+    where cust_email=#{custEmail} and cust_pwd=#{custPwd}
+  </select>
 </mapper>

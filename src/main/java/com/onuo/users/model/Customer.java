@@ -33,4 +33,79 @@ public class Customer {
 
     @Column(name = "cust_profile")
     private String custProfile;
+
+    public Customer() {
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
+    }
+
+    public String getCustName() {
+        return custName;
+    }
+
+    public void setCustName(String custName) {
+        this.custName = custName;
+    }
+
+    public String getCustPwd() {
+        return custPwd;
+    }
+
+    public void setCustPwd(String custPwd) {
+        this.custPwd = custPwd;
+    }
+
+    public Integer getCustAge() {
+        return custAge;
+    }
+
+    public void setCustAge(Integer custAge) {
+        this.custAge = custAge;
+    }
+
+    public String getCustPhone() {
+        return custPhone;
+    }
+
+    public void setCustPhone(String custPhone) {
+        this.custPhone = custPhone;
+    }
+
+    public String getCustEmail() {
+        return custEmail;
+    }
+
+    public void setCustEmail(String custEmail) {
+        this.custEmail = custEmail;
+    }
+
+    public Date getCustCreateTime() {
+        return custCreateTime;
+    }
+
+    public void setCustCreateTime(Date custCreateTime) {
+        this.custCreateTime = custCreateTime;
+    }
+
+    public Date getCustUpdateTime() {
+        return custUpdateTime;
+    }
+
+    public void setCustUpdateTime(Date custUpdateTime) {
+        this.custUpdateTime = custUpdateTime;
+    }
+
+    public String getCustProfile() {
+        return custProfile;
+    }
+
+    public void setCustProfile(String custProfile) {
+        this.custProfile = custProfile;
+    }
 }
