@@ -9,5 +9,11 @@
     <result column="shoes_color_name" jdbcType="VARCHAR" property="shoesColorName" />
     <result column="shoes_color_status" jdbcType="BIT" property="shoesColorStatus" />
   </resultMap>
-    <select id="queryAllColorByShooesId" resultType="com.onuo.goods.model.ShoesColor"></select>
+    <select id="queryAllColorByShooesId" resultType="com.onuo.goods.model.ShoesColor" resultMap="BaseResultMap">
+      select
+      ss.shoes_color_id,ss.shoes_color_name,ss.shoes_color_status
+      from shoes_detail sd join shoes_color ss
+      on sd.shoes_color_id = ss.shoes_color_id
+
+    </select>
 </mapper>

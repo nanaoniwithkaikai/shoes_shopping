@@ -12,7 +12,17 @@
     <result column="add_time" jdbcType="DATE" property="addTime" />
     <result column="update_time" jdbcType="DATE" property="updateTime" />
   </resultMap>
-    <insert id="save"></insert>
-  <update id="updateCount"></update>
-  <delete id="delete"></delete>
+    <insert id="save">
+      insert into cart (cart_id,cust_id,shoes_detail_id,quality,add_time,update_time)
+      values (#{cartId},#{custId},#{shoesDetailId},#{quality},#{addTime},#{updateTime})
+    </insert>
+  <update id="updateCount">
+    UPDATE cart
+    SET quality = #{param3}
+    where shoes_detail_id = #{param1} and cust_id= #{param2}
+  </update>
+  <delete id="delete">
+    DELETE FROM cart
+    WHERE shoes_detail_id = #{param1.shoesDetailId} and cust_id=#{param2}
+  </delete>
 </mapper>

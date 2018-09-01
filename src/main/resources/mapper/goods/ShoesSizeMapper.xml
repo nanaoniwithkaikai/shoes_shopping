@@ -9,5 +9,11 @@
     <result column="shoes_size" jdbcType="REAL" property="shoesSize" />
     <result column="shoes_state" jdbcType="BIT" property="shoesState" />
   </resultMap>
-    <select id="queryAllSizeByShooesId" resultType="com.onuo.goods.model.ShoesSize"></select>
+    <select id="queryAllSizeByShooesId" resultType="com.onuo.goods.model.ShoesSize">
+    select
+    ss.shoes_size_id,ss.shoes_size,ss.shoes_state
+    from shoes_detail sd join shoes_size ss
+    on sd.shoes_size_id = ss.shoes_size_id
+    where sd.shoes_size_id = #{shoesId}
+    </select>
 </mapper>
