@@ -17,7 +17,7 @@
     <result column="is_default_address" jdbcType="INTEGER" property="isDefaultAddress" />
     <result column="cust_id" jdbcType="VARCHAR" property="custId" />
   </resultMap>
-    <insert id="save" parameterType="com.onuo.carts.model.ReceiveAddress">
+    <insert id="save">
       insert into receive_address
        values(#{addressId},#{addressProvince},#{addressCity},#{addressArea},#{addressStreet},#{addressDetail},#{addressPostCode},#{addressRecipientName},
        #{addressRecipientTelno},#{isDefaultAddress},#{custId})
@@ -30,14 +30,23 @@
       address_area=#{addressArea},address_street=#{addressStreet},address_detail=#{addressDetail},
       address_post_code=#{addressPostCode},address_recipient_name=#{addressRecipientName},address_recipient_telno=#{addressRecipientTelno},
       is_default_address=#{isDefaultAddress},cust_id=#{custId}
-     where cust_id = #{custId}
+     where address_id = #{addressId}
   </update>
 
 
+  <update id="updateDefaultAddress">
+    update receive_address
+    set is_default_address=1
+    where address_id=#{param1} and cust_id=#{custId}
+  </update>
 
-  <update id="updateDefaultAddress"></update>
-  <delete id="delete"></delete>
+  <delete id="delete">
+    delete
+    from receive_address
+    where address_id=#{param1}
+  </delete>
   <select id="queryAll" resultMap="BaseResultMap">
     SELECT * from receive_address
+    where cust_id=#{custId}
   </select>
 </mapper>
