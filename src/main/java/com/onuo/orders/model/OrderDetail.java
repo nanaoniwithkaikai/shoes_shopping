@@ -39,48 +39,4 @@ public class OrderDetail {
     @Column(name = "order_shoes_size")
     private String orderShoesSize;
 
-
-
-
-
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
-
-    public String getShoesDetailId() {
-        return shoesDetailId;
-    }
-
-    public void setShoesDetailId(String shoesDetailId) {
-        this.shoesDetailId = shoesDetailId;
-    }
-
-    public Integer getQuality() {
-        return quality;
-    }
-
-    public void setQuality(Integer quality) {
-        this.quality = quality;
-    }
-
-    public String getOrderShoesColor() {
-        return orderShoesColor;
-    }
-
-    public void setOrderShoesColor(String orderShoesColor) {
-        this.orderShoesColor = orderShoesColor;
-    }
-
-    public String getOrderShoesSize() {
-        return orderShoesSize;
-    }
-
-    public void setOrderShoesSize(String orderShoesSize) {
-        this.orderShoesSize = orderShoesSize;
-    }
 }
