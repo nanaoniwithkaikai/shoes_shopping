@@ -51,6 +51,5 @@ public class ShoesMapperTest {
     @Test
     public void categoryId(){
         System.out.println(mapper.queryByCategory("1001"));
-        System.out.println("测试");
     }
 }
